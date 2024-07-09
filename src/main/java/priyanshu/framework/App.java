@@ -21,7 +21,7 @@ public class App
 
         driver.findElement(By.id("firstName")).sendKeys("Priyanshu");
         driver.findElement(By.id("lastName")).sendKeys("Srivastava");
-        driver.findElement(By.id("userEmail")).sendKeys("priyanshu12@gmail.com");
+        driver.findElement(By.id("userEmail")).sendKeys("priyanshu@gmail.com");
         driver.findElement(By.id("userMobile")).sendKeys("7373737373");
 
         Select select = new Select(driver.findElement(By.xpath("//select[@formcontrolname='occupation']")));
@@ -29,7 +29,7 @@ public class App
 
         driver.findElement(By.xpath("//input[@value='Male']")).click();
 
-        String password = "123@Abc$#";
+        String password = "Password$1#";
         driver.findElement(By.id("userPassword")).sendKeys(password);
         driver.findElement(By.id("confirmPassword")).sendKeys(password);
 

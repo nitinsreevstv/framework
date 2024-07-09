@@ -16,7 +16,7 @@ import priyanshu.framework.loginPage;
 
 public class BaseTest {
     public WebDriver driver;
-    public loginPage lp;
+    public static loginPage lp;
     public WebDriver initDriver() throws IOException{
         Properties pro = new Properties();
         FileInputStream fis = new FileInputStream("src//main//java//main//java//resources//Global.properties");

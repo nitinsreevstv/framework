@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import priyanshu.framework.cartPage;
+import priyanshu.framework.orderPage;
 
 public class abstractComponents {
     WebDriver driver;
@@ -21,10 +22,20 @@ public class abstractComponents {
     }
     @FindBy(xpath = "//button[@routerlink='/dashboard/cart']")
     WebElement cartMenu;
+
+    @FindBy(xpath = "//button[@routerlink='/dashboard/myorders']")
+    WebElement orders;
+
     public cartPage goToCart(){
         cartMenu.click();
         cartPage cp = new cartPage(driver);
         return cp;
+    }
+
+    public orderPage goToOrders(){
+        orders.click();
+        orderPage op = new orderPage(driver);
+        return op;
     }
     
     public void waitUntil(By findBy){
